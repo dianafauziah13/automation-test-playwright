@@ -28,6 +28,10 @@ export class LoginPage {
     return this.page.getByText("Your email or password is incorrect!");
   }
 
+  async getLoggedUsername() {
+    return this.page.getByText("Logged in as Diana Fauziah");
+  }
+
   async fillSignupForm(name: string, email: string) {
     await this.page.fill('input[name="name"]', name);
     await this.page.fill('input[data-qa="signup-email"]', email);
@@ -49,11 +53,19 @@ export class LoginPage {
     await LoginButton.click();
   }
 
+  async clickLogoutButton() {
+    const LogoutLink = this.page.getByRole("link", {
+      name: "Logout",
+    });
+
+    await LogoutLink.click();
+  }
+
+
   async clickDeleteAccountLink() {
     const deleteAccountLink = this.page.getByRole("link", {
       name: "Delete Account",
     });
-
 
 
     await deleteAccountLink.click();
