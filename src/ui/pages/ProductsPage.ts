@@ -18,7 +18,7 @@ export class ProductPage {
   }
 
   async getAllProductText() {
-    return this.page.getByText("All Products");
+    return this.page.getByRole('heading', { name: 'All Products' });
   }
 
   async fillReviewForm(name: string, email: string, review: string) {
@@ -32,4 +32,14 @@ export class ProductPage {
     const reviewButton = this.page.getByRole("button", { name: "Submit" });
     await reviewButton.click();
   }
+  
+  async continueShopping () {
+      await this.page.getByRole('button', { name: 'Continue Shopping' }).click();
+  }
+  
+  async viewCart () {
+    await this.page.getByRole('link', { name: 'View Cart' }).click();
+  }
+
 }
+

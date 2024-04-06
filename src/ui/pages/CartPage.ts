@@ -37,6 +37,8 @@ export class CartPage {
     await this.page.fill('input[data-qa="cvc"]', usersData.CVC);
     await this.page.fill('input[data-qa="expiry-month"]', usersData.exporationM);
     await this.page.fill('input[data-qa="expiry-year"]', usersData.exporationY);
+    await this.page.getByRole('button', { name: 'Pay and Confirm Order' }).click();
   }
 
 }
+

@@ -31,7 +31,7 @@ export class RegisterPage {
   }
 
   async navigate() {
-    await this.page.goto("/signup");
+    await this.page.goto("/login");
   }
 
   async getAccountInfoFormTitle() {

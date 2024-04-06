@@ -27,7 +27,7 @@ test.describe('Register:', () => {
         await page.click('text=Register / Login');
 
         const registerPage = new RegisterPage(page);
-        await registerPage.navigate();
+        // await registerPage.navigate();
 
         await registerPage.fillSignForm(usersData);
         await registerPage.clickSignup();
@@ -60,4 +60,6 @@ test.describe('Register:', () => {
         await page.click('button[data-qa="pay-button"]');
 
 	});
+
+        
 });

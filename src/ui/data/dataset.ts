@@ -2,8 +2,8 @@ import { FormValues } from "../pages/RegisterPage";
 
 export let usersData: FormValues = {
   title: "Mr.",
-  name: "Permana Irawan",
-  email: "irawan@gmail.com",
+  name: "Denndi Permana",
+  email: "Denndi@gmail.com",
   password: "123password",
   dob: {
     day: "30",
@@ -12,8 +12,8 @@ export let usersData: FormValues = {
   },
   signupNewsletter: true,
   receiveOffers: false,
-  firstName: "Permana",
-  lastName: "Irawan",
+  firstName: "Denndi",
+  lastName: "Permana",
   company: "PERMANAs Corp",
   address: "Bandung",
   address2: "Bandung 123",

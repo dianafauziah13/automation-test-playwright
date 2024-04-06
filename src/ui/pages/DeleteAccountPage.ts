@@ -8,14 +8,15 @@ export class DeleteAccountPage {
   }
 
   async getPageTitle() {
-    return this.page.getByText("ACCOUNT DELETED!");
+    return this.page.getByText("Account Deleted!");
   }
 
   async clickContinueButton() {
-    const continueButton = this.page.getByRole("link", {
-      name: "Continue",
-    });
+    // const continueButton = this.page.getByRole("link", {
+    //   name: "Continue",
+    // });
 
-    await continueButton.click();
+    // await continueButton.click();
+    await this.page.click('a[data-qa="continue-button"]');
   }
 }

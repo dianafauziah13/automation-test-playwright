@@ -21,12 +21,11 @@ export class HomePage {
 
   async clickSignupLoginButton() {
     const signupLoginButton = this.page.getByText("Signup / Login");
-
     await signupLoginButton.click();
   }
 
   async clickCartButton(){
-    await this.page.click('[a[href="/view_cart"]]'); 
+    await this.page.getByRole('link', { name: 'Cart' }).click();
   }
 
   async clickPorductButton() {
@@ -46,6 +45,18 @@ export class HomePage {
 
   async fillSubscribe(email: string) {
     await this.page.fill('#susbscribe_email', email);
+  }
+
+  async clickDeleteAccountLink() {
+    const deleteAccountLink = this.page.getByRole("link", {
+      name: "Delete Account",
+    });
+
+    await deleteAccountLink.click();
+  }
+
+  async scrollToBottom () {
+    await this.page.mouse.wheel(0,10000);
   }
 
 }
